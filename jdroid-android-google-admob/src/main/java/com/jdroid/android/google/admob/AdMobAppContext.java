@@ -36,7 +36,7 @@ public class AdMobAppContext {
 	}
 
 	public Boolean areAdsEnabledByDefault() {
-		return AbstractApplication.get().getBuildConfigValue("ADS_ENABLED", false);
+		return AbstractApplication.get().getAppContext().getBuildConfigValue("ADS_ENABLED", false);
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class AdMobAppContext {
 	 * @return The MD5-hashed ID of the devices that should display mocked ads
 	 */
 	public Set<String> getTestDevicesIds() {
-		String testDevicesIds = AbstractApplication.get().getBuildConfigValue("ADS_TEST_DEVICES_IDS", null);
+		String testDevicesIds = AbstractApplication.get().getAppContext().getBuildConfigValue("ADS_TEST_DEVICES_IDS", null);
 		return testDevicesIds != null ? Sets.newHashSet(StringUtils.splitToCollectionWithCommaSeparator(testDevicesIds)) : Sets.<String>newHashSet();
 	}
 
@@ -65,6 +65,6 @@ public class AdMobAppContext {
 	 * @return The AdMob Publisher ID
 	 */
 	public String getDefaultAdUnitId() {
-		return AbstractApplication.get().getBuildConfigValue("AD_UNIT_ID", null);
+		return AbstractApplication.get().getAppContext().getBuildConfigValue("AD_UNIT_ID", null);
 	}
 }

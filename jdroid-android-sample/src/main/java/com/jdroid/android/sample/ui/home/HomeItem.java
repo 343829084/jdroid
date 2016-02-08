@@ -33,7 +33,6 @@ import com.jdroid.android.sample.ui.toasts.ToastsActivity;
 public enum HomeItem implements ActionItem {
 	
 	ADMOB(R.string.adMob, R.drawable.apps, AdsActivity.class),
-	ANDROID_UNVERSAL_IMAGE_LOADER(R.string.universalImageLoader, R.drawable.photo, ImageLoaderActivity.class),
 	CARD_VIEW(R.string.cardView, R.drawable.datetime, CardViewActivity.class),
 	DATE_TIME(R.string.dateTime, R.drawable.datetime, DateTimeActivity.class),
 	EXCEPTION_HANDLING(R.string.exceptionHandling, R.drawable.bug, ExceptionHandlingActivity.class),
@@ -53,7 +52,8 @@ public enum HomeItem implements ActionItem {
 	SERVICE(R.string.service, R.drawable.list, ServiceActivity.class),
 	SQLITE(R.string.sqlite, R.drawable.list, SQLiteActivity.class),
 	TABLETS(R.string.tablets, R.drawable.tablet, ScreenUtils.is10Inches() ? TabletActivity.class : LeftTabletActivity.class),
-	TOASTS(R.string.toasts, R.drawable.info, ToastsActivity.class);
+	TOASTS(R.string.toasts, R.drawable.info, ToastsActivity.class),
+	UNVERSAL_IMAGE_LOADER(R.string.universalImageLoader, R.drawable.photo, ImageLoaderActivity.class);
 
 	private Integer resourceId;
 	private Integer iconId;

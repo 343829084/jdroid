@@ -3,7 +3,9 @@ package com.jdroid.android.context;
 import android.preference.PreferenceManager;
 
 import com.jdroid.android.application.AbstractApplication;
+import com.jdroid.android.utils.AndroidUtils;
 import com.jdroid.java.http.Server;
+import com.jdroid.java.utils.ReflectionUtils;
 
 import java.util.Locale;
 
@@ -15,6 +17,20 @@ public abstract class AppContext {
 	public AppContext() {
 
 		server = findServerByName(getServerName());
+	}
+
+	public Class<?> getBuildConfigClass() {
+		return ReflectionUtils.getClass(AndroidUtils.getApplicationId() + ".BuildConfig");
+	}
+
+	@SuppressWarnings("unchecked")
+	public <T> T getBuildConfigValue(String property) {
+		return (T)ReflectionUtils.getStaticFieldValue(getBuildConfigClass(), property);
+	}
+
+	@SuppressWarnings("unchecked")
+	public <T> T getBuildConfigValue(String property, Object defaultValue) {
+		return (T)ReflectionUtils.getStaticFieldValue(getBuildConfigClass(), property, defaultValue);
 	}
 	
 	protected Server findServerByName(String name) {
@@ -38,7 +54,7 @@ public abstract class AppContext {
 	}
 
 	protected String getServerName() {
-		return AbstractApplication.get().getBuildConfigValue("SERVER_NAME", null);
+		return getBuildConfigValue("SERVER_NAME", null);
 	}
 	
 	/**
@@ -53,11 +69,11 @@ public abstract class AppContext {
 	}
 
 	public String getBuildType() {
-		return AbstractApplication.get().getBuildConfigValue("BUILD_TYPE");
+		return getBuildConfigValue("BUILD_TYPE");
 	}
 
 	public String getBuildTime() {
-		return AbstractApplication.get().getBuildConfigValue("BUILD_TIME");
+		return getBuildConfigValue("BUILD_TIME", null);
 	}
 
 	/**
@@ -71,27 +87,26 @@ public abstract class AppContext {
 	 * @return Whether the application has Google Analytics enabled or not
 	 */
 	public Boolean isGoogleAnalyticsEnabled() {
-		return AbstractApplication.get().getBuildConfigValue("GOOGLE_ANALYTICS_ENABLED", false);
+		return getBuildConfigValue("GOOGLE_ANALYTICS_ENABLED", false);
 	}
 	
 	/**
 	 * @return The Google Analytics Tracking ID
 	 */
 	public String getGoogleAnalyticsTrackingId() {
-		return AbstractApplication.get().getBuildConfigValue("GOOGLE_ANALYTICS_TRACKING_ID", null);
+		return getBuildConfigValue("GOOGLE_ANALYTICS_TRACKING_ID", null);
 	}
 	
 	public  Boolean isGoogleAnalyticsDebugEnabled() {
-		return AbstractApplication.get().getBuildConfigValue("GOOGLE_ANALYTICS_DEBUG_ENABLED", false);
+		return getBuildConfigValue("GOOGLE_ANALYTICS_DEBUG_ENABLED", false);
 	}
 	
 	public String getLocalIp() {
-		return AbstractApplication.get().getBuildConfigValue("LOCAL_IP", null);
+		return getBuildConfigValue("LOCAL_IP", null);
 	}
 
-
 	public String getInstallationSource() {
-		return AbstractApplication.get().getBuildConfigValue("INSTALLATION_SOURCE", "GooglePlay");
+		return getBuildConfigValue("INSTALLATION_SOURCE", "GooglePlay");
 	}
 
 	public Boolean isChromeInstallationSource() {

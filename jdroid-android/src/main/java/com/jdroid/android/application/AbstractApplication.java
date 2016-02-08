@@ -299,20 +299,6 @@ public abstract class AbstractApplication extends Application {
 	
 	public abstract Class<? extends Activity> getHomeActivityClass();
 
-	public Class<?> getBuildConfigClass() {
-		return ReflectionUtils.getClass(AndroidUtils.getApplicationId() + ".BuildConfig");
-	}
-
-	@SuppressWarnings("unchecked")
-	public <T> T getBuildConfigValue(String property) {
-		return (T)ReflectionUtils.getStaticFieldValue(AbstractApplication.get().getBuildConfigClass(), property);
-	}
-
-	@SuppressWarnings("unchecked")
-	public <T> T getBuildConfigValue(String property, Object defaultValue) {
-		return (T)ReflectionUtils.getStaticFieldValue(AbstractApplication.get().getBuildConfigClass(), property, defaultValue);
-	}
-
 	@NonNull
 	protected abstract AppContext createAppContext();
 

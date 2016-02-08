@@ -6,7 +6,7 @@ import com.jdroid.android.application.AbstractApplication;
 public class CrashlyticsAppContext {
 
 	public Boolean isCrashlyticsEnabled() {
-		return AbstractApplication.get().getBuildConfigValue("CRASHLYTICS_ENABLED", false);
+		return AbstractApplication.get().getAppContext().getBuildConfigValue("CRASHLYTICS_ENABLED", false);
 	}
 
 	public AnalyticsTracker getAnalyticsTracker() {

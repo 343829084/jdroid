@@ -15,7 +15,7 @@
 	<string name="timePickerDialog">Time Picker Dialog</string>
 
 	<!-- Image Loader -->
-	<string name="universalImageLoader">Android Universal Image Loader</string>
+	<string name="universalImageLoader">Universal Image Loader</string>
 
 	<!-- Exception Handling -->
 	<string name="exceptionHandling">Exception Handling</string>

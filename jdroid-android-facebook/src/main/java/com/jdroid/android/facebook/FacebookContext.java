@@ -8,7 +8,7 @@ public class FacebookContext {
 	 * @return The registered Facebook app ID that is used to identify this application for Facebook.
 	 */
 	public String getFacebookAppId() {
-		return AbstractApplication.get().getBuildConfigValue("FACEBOOK_APP_ID");
+		return AbstractApplication.get().getAppContext().getBuildConfigValue("FACEBOOK_APP_ID");
 	}
 
 }

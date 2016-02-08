@@ -176,7 +176,6 @@ android {
 		}
 
 		// Common
-		jdroid.setString(defaultConfig, "BUILD_TIME", jdroid.getBuildTime())
 		jdroid.setString(defaultConfig, "GIT_SHA", jdroid.getGitSha())
 		jdroid.setString(defaultConfig, "GIT_BRANCH", jdroid.getGitBranch())
 
@@ -208,7 +207,6 @@ android {
 		]
 
 		multiDexEnabled true
-
 	}
 
 	signingConfigs {
@@ -230,6 +228,7 @@ android {
 		debug {
 			signingConfig signingConfigs.debug
 
+			jdroid.setString(buildTypes.debug, "BUILD_TIME", null)
 			jdroid.setBoolean(buildTypes.debug, "CRASHLYTICS_ENABLED", false)
 			jdroid.setString(buildTypes.debug, "SERVER_NAME", "DEV")
 		}
@@ -239,6 +238,7 @@ android {
 
 			debuggable true
 
+			jdroid.setString(buildTypes.uat, "BUILD_TIME", jdroid.getBuildTime())
 			jdroid.setString(buildTypes.uat, "SERVER_NAME", "UAT")
 
 		}
