@@ -6,7 +6,6 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.TextView;
-import com.jdroid.android.R;
 
 /**
  * Text view used to show a badge with a number of notifications. If the notifications are less than zero, the badge
@@ -32,7 +31,6 @@ public class BadgeView extends TextView {
 		}
 		
 		// Adding styles
-		setBackgroundResource(R.drawable.item_activated);
 		setPadding(8, 4, 8, 4);
 		setTextColor(Color.WHITE);
 		setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);

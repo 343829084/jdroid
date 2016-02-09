@@ -149,7 +149,7 @@ public final class ToastUtils {
 	 * @param yOffset The Y offset in pixels to apply to the gravity's location.
 	 */
 	public static void showInfoToast(String message, int duration, Integer gravity, Integer xOffset, Integer yOffset) {
-		showCustomToast(R.drawable.toast_info, message, duration, gravity, xOffset, yOffset);
+		showCustomToast(R.drawable.ic_info_white_24dp, message, duration, gravity, xOffset, yOffset);
 	}
 	
 	/**
@@ -190,7 +190,7 @@ public final class ToastUtils {
 	 * @param yOffset The Y offset in pixels to apply to the gravity's location.
 	 */
 	public static void showWarningToast(String message, int duration, Integer gravity, Integer xOffset, Integer yOffset) {
-		showCustomToast(R.drawable.toast_warning, message, duration, gravity, xOffset, yOffset);
+		showCustomToast(R.drawable.ic_warning_white_24dp, message, duration, gravity, xOffset, yOffset);
 	}
 	
 	/**
@@ -240,7 +240,7 @@ public final class ToastUtils {
 	 * @param yOffset The Y offset in pixels to apply to the gravity's location.
 	 */
 	public static void showErrorToast(String message, int duration, Integer gravity, Integer xOffset, Integer yOffset) {
-		showCustomToast(R.drawable.toast_error, message, duration, gravity, xOffset, yOffset);
+		showCustomToast(R.drawable.ic_error_white_24dp, message, duration, gravity, xOffset, yOffset);
 	}
 	
 	/**

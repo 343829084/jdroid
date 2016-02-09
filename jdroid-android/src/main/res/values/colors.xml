@@ -12,7 +12,6 @@
 	<color name="accentColorPressed">#448AFF</color>
 
 	<!-- Text -->
-	<color name="actionBarTextColor">@android:color/white</color>
 	<color name="textColor">#444444</color>
 
 	<!-- Nav Drawer -->

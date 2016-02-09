@@ -9,17 +9,11 @@ public class RefreshActionProvider extends TwoStateActionProvider {
 		super(context);
 	}
 	
-	/**
-	 * @see com.jdroid.android.provider.TwoStateActionProvider#getFirstStateImageResId()
-	 */
 	@Override
 	protected Integer getFirstStateImageResId() {
-		return R.drawable.ic_menu_refresh;
+		return R.drawable.ic_refresh_white_24dp;
 	}
 	
-	/**
-	 * @see com.jdroid.android.provider.TwoStateActionProvider#getFirstStateCheatSheetResId()
-	 */
 	@Override
 	protected Integer getFirstStateCheatSheetResId() {
 		return R.string.refresh;

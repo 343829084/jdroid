@@ -46,7 +46,7 @@ public class MapFragment extends AbstractMapFragment {
 		options1.title("Title 1");
 		options1.snippet("Snippet 1");
 		options1.anchor(0.5f, 0.5f);
-		options1.icon(BitmapDescriptorFactory.fromResource(R.drawable.map));
+		options1.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_maps));
 		googleMap.addMarker(options1);
 
 		LatLng latLng2 = new LatLng(-34.623556, -58.448611);
@@ -57,7 +57,7 @@ public class MapFragment extends AbstractMapFragment {
 		options2.title("Title 2");
 		options2.snippet("Snippet 2");
 		options2.anchor(0.5f, 0.5f);
-		options2.icon(BitmapDescriptorFactory.fromResource(R.drawable.map));
+		options2.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_maps));
 		googleMap.addMarker(options2);
 
 		googleMap.addPolyline(linePolylineOptions);

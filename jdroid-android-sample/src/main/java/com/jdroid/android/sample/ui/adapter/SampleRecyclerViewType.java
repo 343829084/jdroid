@@ -16,7 +16,7 @@ public abstract class SampleRecyclerViewType extends RecyclerViewType<String, Sa
 
 	@Override
 	protected Integer getLayoutResourceId() {
-		return R.layout.home_item;
+		return R.layout.default_item;
 	}
 
 	@Override

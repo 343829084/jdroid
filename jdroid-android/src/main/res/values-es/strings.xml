@@ -8,9 +8,6 @@
 	<string name="no">No</string>
 	<string name="noResults">No hay resultados disponibles</string>
 	<string name="zeroPercent">0%</string>
-	<string name="next">Siguiente</string>
-	<string name="previous">Anterior</string>
-	<string name="finish">Finalizar</string>
 	<string name="refresh">Actualizar</string>
 	<string name="update">Actualizar</string>
 	<string name="logout">Cerrar sesión</string>

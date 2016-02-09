@@ -34,7 +34,7 @@ public class HomeFragment extends AbstractRecyclerFragment {
 
 		@Override
 		protected Integer getLayoutResourceId() {
-			return R.layout.home_item;
+			return R.layout.default_item;
 		}
 
 		@Override
